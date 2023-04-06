@@ -1,0 +1,25 @@
+html,body{
+    height: 100%;
+    margin: 0;
+    cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur),default;
+
+    background: url("@/assets/images/bj.jpg") center center / cover repeat;
+    /* background: url("https://xitong-parent.oss-cn-hangzhou.aliyuncs.com/2022/09/03/896c734fbcb64374b44d837e33975cd7.jpg") center center / cover no-repeat; */
+    background-attachment: fixed;
+
+}
+/* .el-card {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15) !important;
+} */
+.el-card:hover{
+    box-shadow:  5px 5px 10px #949494,
+             0px 0px 10px #716d6d;
+}
+.el-tag:hover{
+    box-shadow:  5px 5px 10px #b6b3b3c7,
+             0px 0px 10px #ffffffb2;
+}
+.el-card{
+    background-color: #fffcfcd8;
+    color: rgba(24, 24, 24, 0.87);
+}

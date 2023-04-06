@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaoliu.system.mapper.BlogMapper">
+
+    <select id="searchPage" resultType="com.xiaoliu.system.entity.Blog">
+        SELECT
+            t_blog.id,
+            t_blog.tittle,
+            t_blog.description,
+            t_blog.content,
+            sys_category.`name` AS categoryName,
+            t_blog.view_counts,
+            t_blog.thumbnail,
+            t_blog.`status`,
+            t_blog.weight,
+            t_blog.tag_id,
+            t_blog.created_time
+        FROM
+            t_blog
+                LEFT JOIN sys_category ON sys_category.id = t_blog.category_id
+        ${ew.CustomSqlSegment}
+    </select>
+</mapper>

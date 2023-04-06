@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaoliu.system.mapper.UserMapper">
+    <select id="Search" resultType="com.xiaoliu.system.entity.User">
+        SELECT t_user.id,
+               t_user.username,
+               t_user.password,
+               t_user.role
+        FROM t_user
+        ${ew.CustomSqlSegment}
+    </select>
+</mapper>
